@@ -17,10 +17,17 @@
     <p id="info"></p>
     <div id="map"></div>
     <script src="geolocalizacion.js"></script>
+    <script>
+      // Fragmentación de la clave (NO es seguridad real, pero dificulta scraping)
+      const PART1 = 'AIzaSyBNtomZ';
+      const PART2 = 'pWjKJOeGmeUuV28x';
+      const PART3 = 'JNBeUKt62bk';
+      const API_KEY = PART1 + PART2 + PART3;
+      </script>
     <script
       async
       defer
-      src="https://maps.googleapis.com/maps/api/js?key=api-key&callback=initMap"
+      src=`https://maps.googleapis.com/maps/api/js?key=${API_KEY}&callback=initMap`
     ></script>
   </body>
 </html>
